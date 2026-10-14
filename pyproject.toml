@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulsenote"
+version = "1.0.0"
+description = "Local-first CLI to generate standup notes from Git history. Built by Mourad.Soltani"
+authors = [{name = "Mourad.Soltani"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+pulsenote = "pulsenote.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
